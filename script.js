@@ -1,14 +1,16 @@
 const button = document.getElementById("convert-button")
 const select = document.getElementById("select-currency")
 
-const dollar = 5.1
-const euro = 5.2
-const bitcoin = 121526.29
-
-const convertValues = () => {
+const convertValues = async () => {
   const inputValue = document.getElementById("input-value").value
   const realValueText = document.getElementById("real-value-text")
   const currencyValueText = document.getElementById("currency-value-text")
+
+  const data = await fetch ("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+  const dollar = data.USDBRL.high
+  const euro = data.EURBRL.high
+  const bitcoin = data.BTCBRL.high
 
   realValueText.innerHTML = new Intl.NumberFormat("pt-BR", {
     // NESSA ESTRUTURA, PEGAMOS DE UMA BIBLIOTECA DO JAVASCRIPT, QUE FORMATA PARA A MOEDA CORRENTE DO PAIS.
