@@ -34,7 +34,7 @@ const convertValues = async () => {
     currencyValueText.innerHTML = new Intl.NumberFormat("sv-ES", {
       style: "currency",
       currency: "BTC",
-    }).format(inputValue / bitcoin)
+    }).format(inputValue * bitcoin)
   }
 }
 

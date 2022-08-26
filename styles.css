@@ -6,24 +6,27 @@
 }
 body {
     background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 .wrapp {
   background-color: #F4F4F4;
   width: 375px;
   height: 760px;
-  margin: 0 auto;
-  margin-top: 10px;
 }
 header {
     background: #1B83E2;
     height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 h1 {
     font-weight: 400;
     font-size: 24px;
     color: #fff;
-    text-align: center;
-    padding-top: 22px;
 }
 main {
     display: block;
@@ -100,10 +103,17 @@ button:active {
 section {
     border: 1px solid #1B83E2;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 .coins {
-    text-align: center;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
 
 .coins-paragraph {
@@ -117,8 +127,4 @@ section {
     font-size: 20px;
     line-height: 18px;
     color: #1B83E2;
-}
-.arrow {
-    display: block;
-    margin: 15px auto;
 }
